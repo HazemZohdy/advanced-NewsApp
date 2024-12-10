@@ -26,10 +26,10 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                   child: Stack(
                     children: <Widget>[
                       Image.network(item.imgUrl,
-                          fit: BoxFit.cover, width: 1000.0),
+                          fit: BoxFit.cover, width: 10000.0),
                       Positioned(
                         top: 10,
-                        left: 10,
+                        left: 20,
                         child: Container(
                           decoration: BoxDecoration(
                             color: Theme.of(context).primaryColor,
@@ -57,9 +57,12 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 25,
                               ),
-                              child: Text(
-                                '${item.outher} . ${item.time}',
-                                style: const TextStyle(color: Colors.white),
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 8),
+                                child: Text(
+                                  '${item.outher} • ${item.time}',
+                                  style: const TextStyle(color: Colors.white),
+                                ),
                               ),
                             ),
                             const SizedBox(width: 8),
@@ -74,12 +77,15 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                                   end: Alignment.topCenter,
                                 ),
                               ),
-                              child: Text(
-                                item.title,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 30),
+                                child: Text(
+                                  item.title,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             ),
@@ -111,16 +117,20 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
             return GestureDetector(
               onTap: () => _controller.animateToPage(entry.key),
               child: Container(
-                width: 12.0,
+                width: _current == entry.key ? 28.0 : 15.0,
                 height: 12.0,
                 margin:
                     const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: (Theme.of(context).brightness == Brightness.dark
-                            ? Colors.white
-                            : Colors.black)
-                        .withOpacity(_current == entry.key ? 0.9 : 0.4)),
+                  borderRadius:
+                      _current == entry.key ? BorderRadius.circular(8) : null,
+                  shape: _current == entry.key
+                      ? BoxShape.rectangle
+                      : BoxShape.circle,
+                  color: _current == entry.key
+                      ? Theme.of(context).primaryColor
+                      : Colors.grey.withOpacity(0.4),
+                ),
               ),
             );
           }).toList(),
