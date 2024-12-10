@@ -1,4 +1,5 @@
-import 'package:advanced_news_app/ui/home_view.dart';
+import 'package:advanced_news_app/ui/custom_navbar_item.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class AdvancedNewsApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: const HomeView(),
+      home: const CustomBottomNavBar(),
     );
   }
 }
