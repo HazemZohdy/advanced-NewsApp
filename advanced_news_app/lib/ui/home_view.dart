@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
             child: Column(
               children: [
                 const Row(
@@ -42,13 +42,12 @@ class HomeView extends StatelessWidget {
                 ),
                 const SizedBox(height: 26),
                 const CustomTitle(title: 'MMA'),
-                const SizedBox(height: 0.12),
+                const SizedBox(height: 10),
                 const CustomCarouselSlider(),
                 const SizedBox(height: 16),
                 const CustomTitle(title: 'Recommendation'),
                 const SizedBox(height: 8),
                 ...news
-             
                     .map((NewsItemModel) => Padding(
                           padding: const EdgeInsets.only(bottom: 16),
                           child:

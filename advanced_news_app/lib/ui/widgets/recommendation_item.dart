@@ -1,7 +1,7 @@
 import 'package:advanced_news_app/models/news_item.dart';
-import 'package:flutter/cupertino.dart';
+ 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+ 
 
 class RecommendationItem extends StatelessWidget {
   const RecommendationItem({super.key, required this.newsItemModel});
