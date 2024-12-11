@@ -35,14 +35,14 @@ List<NewsItemModel> news = [
       id: 3,
       title: 'this is the  lol',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnj-jILJTjyZacESTQ1MshAhybg5AxTC0FMA&s',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGjNNK-DMGBvBpK8ZfcYk-PBbMPNaZHn9zYg&s',
       outher: 'Emm',
       category: 'all'),
   NewsItemModel(
       id: 4,
       title: 'this is anything of sport',
       imgUrl:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnj-jILJTjyZacESTQ1MshAhybg5AxTC0FMA&s',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiu0-gbEVqaD8QfJ_B0JfXpgUhKrG4NNyJ3Q&s',
       outher: 'CNN',
       category: 'Medical'),
 ];
